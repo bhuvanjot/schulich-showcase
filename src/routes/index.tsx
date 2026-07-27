@@ -300,6 +300,24 @@ function Index() {
                     "Prepared diligence and investor materials supporting transaction execution and cross-functional deal delivery.",
                   ],
                 },
+                {
+                  role: "Equity Research Fall Analyst",
+                  company: "Green Portfolio",
+                  location: "Toronto, Canada",
+                  period: "Sep 2024 — Dec 2024",
+                  points: [
+                    "Conducted equity research across public companies, building financial models and valuation analyses to support investment views.",
+                  ],
+                },
+                {
+                  role: "Private Capital Summer Analyst",
+                  company: "Unlisted Assets",
+                  location: "Toronto, Canada",
+                  period: "May 2024 — Aug 2024",
+                  points: [
+                    "Supported private capital coverage through company screening, market research, and preparation of client-facing materials.",
+                  ],
+                },
               ].map((job) => (
                 <div key={`${job.company}-${job.period}`} className="relative mb-10 last:mb-0">
                   <span className="absolute -left-[calc(2rem+9px)] top-8 block h-4 w-4 rounded-full border-2 border-background bg-secondary" />
