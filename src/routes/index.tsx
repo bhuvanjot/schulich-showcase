@@ -172,7 +172,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="order-1 flex items-center justify-center lg:order-2">
+          <div className="order-1 flex h-full items-center justify-center lg:order-2">
             <div className="relative w-full max-w-md overflow-hidden rounded-2xl shadow-2xl lg:max-w-lg">
               <img
                 src={heroVisual}
