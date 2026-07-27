@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Briefcase,
   GraduationCap,
-  FolderOpen,
+  Users,
   User,
   Mail,
   Linkedin,
