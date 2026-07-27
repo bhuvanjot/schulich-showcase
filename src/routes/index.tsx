@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Briefcase,
   GraduationCap,
-  FolderOpen,
+  Users,
   User,
   Mail,
   Linkedin,
@@ -56,7 +56,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "Involvement", href: "#involvement" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -346,54 +346,75 @@ function Index() {
         </section>
 
 
-        <section id="projects" className="py-24">
+        <section id="involvement" className="py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 flex items-center gap-3">
-              <FolderOpen className="h-6 w-6 text-secondary" />
-              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">Selected Work</h2>
+              <Users className="h-6 w-6 text-secondary" />
+              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">
+                Leadership &amp; Involvement
+              </h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "Real Estate Investment Memo",
+                  title: "Alternatives Analyst",
+                  org: "Global Macro Strategy Group (GMSG)",
+                  period: "May 2026 — Present",
                   description:
-                    "A comprehensive analysis of a multifamily acquisition, including rent roll underwriting, exit scenarios, and IRR sensitivities.",
-                  tags: ["Financial Modeling", "Real Estate", "Investment Analysis"],
+                    "Cover alternatives for monthly macro strategy publications across private equity, private credit, real estate, venture capital, and hedge funds, focusing on liquidity, valuation, and capital flow trends.",
                 },
                 {
-                  title: "DCF Valuation Model",
+                  title: "Senior Advisor (Former Finance Director)",
+                  org: "Finance Student Association (FSA)",
+                  period: "May 2025 — Present",
                   description:
-                    "A fully linked discounted cash flow model with scenario and sensitivity analysis for a publicly traded company.",
-                  tags: ["DCF", "Valuation", "Excel"],
+                    "Advise the executive team on financial strategy and resource allocation for 10+ key initiatives and mentorship programs.",
                 },
                 {
-                  title: "Market Research Dashboard",
+                  title: "Finance Director",
+                  org: "The Insider Media Group",
+                  period: "May 2025 — Apr 2026",
                   description:
-                    "A data-driven study of Toronto real estate trends using public datasets, visualized for investment decision-making.",
-                  tags: ["Python", "Data Analysis", "Visualization"],
+                    "Managed budgeting and financial planning for a student-run media organization, overseeing spend across content and events.",
                 },
-              ].map((project) => (
+                {
+                  title: "Research Analyst",
+                  org: "York Finance Club (YFC)",
+                  period: "Jan 2025 — Apr 2025",
+                  description:
+                    "Conducted fundamental research on automotive suppliers; pitched BorgWarner (NYSE: BWA) as a buy on electrification strategy and the PHINIA spin-off, with DCF and comps supporting ~35% upside.",
+                },
+                {
+                  title: "Finance Delegate",
+                  org: "DECA Inc.",
+                  period: "Sep 2023 — Jun 2024",
+                  description:
+                    "Competed in finance case events, building analysis and presentation skills against national-level participants.",
+                },
+                {
+                  title: "Team Captain & Coach",
+                  org: "Schulich Cricket Team · Kickboxing",
+                  period: "Ongoing",
+                  description:
+                    "Captain of the Schulich cricket team and kickboxing coach; Taekwondo black belt and 3x international gold medalist.",
+                },
+              ].map((item) => (
                 <div
-                  key={project.title}
+                  key={`${item.org}-${item.title}`}
                   className="flex flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-shadow hover:shadow-md"
                 >
-                  <h3 className="font-heading text-xl font-bold text-primary">{project.title}</h3>
-                  <p className="mt-3 flex-1 text-muted-foreground">{project.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <h3 className="font-heading text-xl font-bold text-primary">{item.title}</h3>
+                  <p className="mt-1 font-medium text-secondary">{item.org}</p>
+                  <span className="mt-3 w-fit rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                    {item.period}
+                  </span>
+                  <p className="mt-4 flex-1 text-muted-foreground">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
 
         <section id="skills" className="border-t border-border bg-card py-24">
           <div className="mx-auto max-w-7xl px-6">
