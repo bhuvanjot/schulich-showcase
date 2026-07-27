@@ -135,7 +135,7 @@ function Index() {
       <main>
         <section
           id="home"
-          className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col items-stretch justify-center gap-12 px-6 py-16 lg:flex-row lg:py-0"
+          className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-1 content-center items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-0"
         >
           <div className="order-2 flex h-full flex-col justify-center lg:order-1 lg:w-1/2">
             <span className="mb-4 inline-block w-fit rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-secondary">
