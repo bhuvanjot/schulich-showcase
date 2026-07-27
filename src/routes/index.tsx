@@ -193,10 +193,10 @@ function Index() {
             </div>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I am a fourth-year BBA candidate at the{" "}
+                I am a third-year BBA candidate at the{" "}
                 <strong className="text-foreground">Schulich School of Business</strong> with a strong
-                interest in finance, real estate, and investment strategy. My experience spans financial
-                modeling, deal analysis, and market research, and I enjoy breaking down complex problems
+                interest in finance and investment strategy. My experience spans financial
+                modelling, deal analysis, and market research, and I enjoy breaking down complex problems
                 into clear, actionable insights.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
