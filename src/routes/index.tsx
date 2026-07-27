@@ -222,17 +222,19 @@ function Index() {
                     Schulich School of Business — York University
                   </h3>
                   <p className="mt-1 text-base font-medium text-secondary">
-                    Bachelor of Business Administration (BBA)
+                    Bachelor of Business Administration (BBA), Finance Specialization
                   </p>
                 </div>
                 <span className="w-fit rounded-full bg-muted px-4 py-1.5 text-sm font-semibold text-muted-foreground">
-                  2022 — 2026
+                  Class of 2028
                 </span>
               </div>
               <p className="mt-6 text-muted-foreground">
-                Pursuing a BBA in Toronto with coursework in finance, accounting, strategy, and
-                investments. Active in student initiatives and case competitions.
+                CGPA 3.8/4.0. Dean&apos;s Honours List (top 15% of class, all semesters) and Schulich
+                Entrance Scholarship recipient. Coursework includes Finance (A+), Financial Accounting
+                (A), and Micro/Macroeconomics (A).
               </p>
+
             </div>
           </div>
         </section>
@@ -244,39 +246,87 @@ function Index() {
               <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">Experience</h2>
             </div>
             <div className="relative border-l border-border pl-8">
-              <div className="relative mb-10">
-                <span className="absolute -left-[calc(0.5rem+1px)] top-2 block h-4 w-4 rounded-full border-2 border-background bg-secondary" />
-                <div className="rounded-2xl border border-border bg-background p-8 shadow-sm">
-                  <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-                    <div>
-                      <h3 className="font-heading text-xl font-bold text-primary">
-                        Private Equity Summer Analyst
-                      </h3>
-                      <p className="mt-1 font-medium text-secondary">Billion Group</p>
+              {[
+                {
+                  role: "Incoming Internal Audit Summer Analyst",
+                  company: "Citi",
+                  location: "Toronto, Canada",
+                  period: "May 2027 — Aug 2027",
+                  points: [
+                    "Scheduled to complete a 16-week internship focused on risk assessment, controls evaluation, and business process reviews.",
+                  ],
+                },
+                {
+                  role: "Private Equity Summer Analyst",
+                  company: "Billion Group",
+                  location: "Toronto, Canada",
+                  period: "May 2026 — Aug 2026",
+                  points: [
+                    "Conducting commercial real estate investment analysis, market research, and capital markets advisory for institutional clients.",
+                    "Assisting on a live sell-side disposition of a 4-unit fitness franchise portfolio by building DCF and comparable company valuation models and analyzing revenue, EBITDA, and margin trends.",
+                    "Participated in 5+ client valuation calls reviewing location-level financial performance for the live sell-side mandate.",
+                  ],
+                },
+                {
+                  role: "Private Equity Fall Analyst",
+                  company: "Define Capital",
+                  location: "Toronto, Canada",
+                  period: "Sep 2025 — Dec 2025",
+                  points: [
+                    "Screened and evaluated 30+ lower-middle-market software acquisition targets by analyzing CIMs and summarizing key financial metrics.",
+                    "Built a 5-year pro forma operating model for a vertical SaaS buyout ($7.5M ARR | $2.0M EBITDA) reflecting pricing optimization, churn reduction, and module upsell.",
+                    "Valued the target using precedent transactions and an LBO framework; base case showed EBITDA margin expansion from 27% to 35% and 2.4x–2.7x MOIC.",
+                  ],
+                },
+                {
+                  role: "Business Strategy & Monetization Summer Analyst",
+                  company: "EVDrop",
+                  location: "Toronto, Canada",
+                  period: "May 2025 — Aug 2025",
+                  points: [
+                    "Designed pricing and monetization frameworks for consumer and SaaS operator platforms at a pre-launch EV charging startup.",
+                    "Built 3+ integrated models and forecasts to test revenue structures, partner incentives, and market-entry profitability scenarios.",
+                    "Benchmarked 10+ charging platforms to evaluate pricing levers, feature asymmetries, and market positioning.",
+                  ],
+                },
+                {
+                  role: "Merchant Banking Winter Analyst",
+                  company: "Notre-Dame Capital",
+                  location: "Montreal, Canada",
+                  period: "Jan 2025 — Apr 2025",
+                  points: [
+                    "Provided capital markets advisory to 10–15 high-growth private companies raising equity or hybrid financing across sectors.",
+                    "Analyzed compliance gaps across 20+ global neobanks to inform a $30M tokenized asset equity financing.",
+                    "Prepared diligence and investor materials supporting transaction execution and cross-functional deal delivery.",
+                  ],
+                },
+              ].map((job) => (
+                <div key={`${job.company}-${job.period}`} className="relative mb-10 last:mb-0">
+                  <span className="absolute -left-[calc(2rem+9px)] top-8 block h-4 w-4 rounded-full border-2 border-background bg-secondary" />
+                  <div className="rounded-2xl border border-border bg-background p-8 shadow-sm">
+                    <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                      <div>
+                        <h3 className="font-heading text-xl font-bold text-primary">{job.role}</h3>
+                        <p className="mt-1 font-medium text-secondary">
+                          {job.company} · {job.location}
+                        </p>
+                      </div>
+                      <span className="w-fit shrink-0 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                        {job.period}
+                      </span>
                     </div>
-                    <span className="w-fit rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                      May 2026 — Present
-                    </span>
+                    <ul className="mt-5 list-disc space-y-2 pl-5 text-muted-foreground">
+                      {job.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="mt-5 list-disc space-y-2 pl-5 text-muted-foreground">
-                    <li>
-                      Support real estate investment transactions through financial modeling, due
-                      diligence, and market analysis.
-                    </li>
-                    <li>
-                      Prepare investment memos and presentation materials for internal investment
-                      committee review.
-                    </li>
-                    <li>
-                      Collaborate with the finance and accounting team to evaluate deal economics and
-                      capital structure.
-                    </li>
-                  </ul>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
+
 
         <section id="projects" className="py-24">
           <div className="mx-auto max-w-7xl px-6">
