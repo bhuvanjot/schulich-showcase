@@ -222,17 +222,19 @@ function Index() {
                     Schulich School of Business — York University
                   </h3>
                   <p className="mt-1 text-base font-medium text-secondary">
-                    Bachelor of Business Administration (BBA)
+                    Bachelor of Business Administration (BBA), Finance Specialization
                   </p>
                 </div>
                 <span className="w-fit rounded-full bg-muted px-4 py-1.5 text-sm font-semibold text-muted-foreground">
-                  2022 — 2026
+                  Class of 2028
                 </span>
               </div>
               <p className="mt-6 text-muted-foreground">
-                Pursuing a BBA in Toronto with coursework in finance, accounting, strategy, and
-                investments. Active in student initiatives and case competitions.
+                CGPA 3.8/4.0. Dean&apos;s Honours List (top 15% of class, all semesters) and Schulich
+                Entrance Scholarship recipient. Coursework includes Finance (A+), Financial Accounting
+                (A), and Micro/Macroeconomics (A).
               </p>
+
             </div>
           </div>
         </section>
