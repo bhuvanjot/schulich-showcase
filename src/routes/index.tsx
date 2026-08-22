@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Personal website of Bhuvanjot Arneja, a BBA candidate at the Schulich School of Business with experience in private equity and real estate.",
+          "Personal website of Bhuvanjot Arneja, a third-year BBA candidate at the Schulich School of Business with experience across private equity, investment banking, and equity research.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Personal website of Bhuvanjot Arneja, a BBA candidate at the Schulich School of Business with experience in private equity and real estate.",
+          "Personal website of Bhuvanjot Arneja, a third-year BBA candidate at the Schulich School of Business with experience across private equity, investment banking, and equity research.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Personal website of Bhuvanjot Arneja, a BBA candidate at the Schulich School of Business with experience in private equity and real estate.",
+          "Personal website of Bhuvanjot Arneja, a third-year BBA candidate at the Schulich School of Business with experience across private equity, investment banking, and equity research.",
       },
     ],
   }),
