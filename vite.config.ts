@@ -1,15 +1,32 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
-//     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
-//     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import tailwindcss from "@tailwindcss/vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
+import { nitro } from "nitro/vite";
+import { defineConfig } from "vite";
+
+// Deploy target. Nitro auto-detects the host at build time (Netlify sets NETLIFY=1),
+// so this only needs to be set to override it — e.g. NITRO_PRESET=node-server.
+const preset = process.env.NITRO_PRESET ?? process.env.SERVER_PRESET;
 
 export default defineConfig({
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+  server: {
+    port: 8080,
   },
+  resolve: {
+    // Vite 8 resolves the "@/*" -> "./src/*" mapping from tsconfig.json natively.
+    tsconfigPaths: true,
+    // React and the TanStack packages must resolve to a single copy, or hooks
+    // and router context break at runtime.
+    dedupe: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-store"],
+  },
+  plugins: [
+    tanstackStart({
+      // Route SSR through src/server.ts, which wraps the default entry so a
+      // crash renders the static error page instead of an h3 JSON 500.
+      server: { entry: "server" },
+    }),
+    viteReact(),
+    tailwindcss(),
+    nitro(preset ? { config: { preset } } : undefined),
+  ],
 });
