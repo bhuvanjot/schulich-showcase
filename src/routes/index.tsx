@@ -145,8 +145,8 @@ function Index() {
               Bhuvanjot Arneja
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Aspiring investor focused on private equity, real estate, and value creation. Currently a
-              Summer Analyst at Billion Group in Toronto.
+              Aspiring investor focused on private equity, real estate, and value creation.
+              Currently a Summer Analyst at Billion Group in Toronto.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
@@ -194,16 +194,16 @@ function Index() {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
               <p className="text-lg leading-relaxed text-muted-foreground">
                 I am a third-year BBA candidate at the{" "}
-                <strong className="text-foreground">Schulich School of Business</strong> with a strong
-                interest in finance and investment strategy. My experience spans financial
-                modelling, deal analysis, and market research, and I enjoy breaking down complex problems
-                into clear, actionable insights.
+                <strong className="text-foreground">Schulich School of Business</strong> with a
+                strong interest in finance and investment strategy. My experience spans financial
+                modelling, deal analysis, and market research, and I enjoy breaking down complex
+                problems into clear, actionable insights.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Most recently, I joined <strong className="text-foreground">Billion Group</strong> as a
-                Private Equity Summer Analyst, where I support real estate transactions through due
-                diligence, valuation, and investment memo preparation. I am always open to connecting with
-                professionals who share a passion for value-driven investing.
+                Most recently, I joined <strong className="text-foreground">Billion Group</strong>{" "}
+                as a Private Equity Summer Analyst, where I support real estate transactions through
+                due diligence, valuation, and investment memo preparation. I am always open to
+                connecting with professionals who share a passion for value-driven investing.
               </p>
             </div>
           </div>
@@ -213,7 +213,9 @@ function Index() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 flex items-center gap-3">
               <GraduationCap className="h-6 w-6 text-secondary" />
-              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">Education</h2>
+              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">
+                Education
+              </h2>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm transition-shadow hover:shadow-md md:p-10">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
@@ -230,11 +232,10 @@ function Index() {
                 </span>
               </div>
               <p className="mt-6 text-muted-foreground">
-                CGPA 3.8/4.0. Dean&apos;s Honours List (top 15% of class, all semesters) and Schulich
-                Entrance Scholarship recipient. Coursework includes Finance (A+), Financial Accounting
-                (A), and Micro/Macroeconomics (A).
+                CGPA 3.8/4.0. Dean&apos;s Honours List (top 15% of class, all semesters) and
+                Schulich Entrance Scholarship recipient. Coursework includes Finance (A+), Financial
+                Accounting (A), and Micro/Macroeconomics (A).
               </p>
-
             </div>
           </div>
         </section>
@@ -243,7 +244,9 @@ function Index() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 flex items-center gap-3">
               <Briefcase className="h-6 w-6 text-secondary" />
-              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">Experience</h2>
+              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">
+                Experience
+              </h2>
             </div>
             <div className="relative border-l border-border pl-8">
               {[
@@ -345,7 +348,6 @@ function Index() {
           </div>
         </section>
 
-
         <section id="involvement" className="py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 flex items-center gap-3">
@@ -415,7 +417,6 @@ function Index() {
           </div>
         </section>
 
-
         <section id="skills" className="border-t border-border bg-card py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 flex items-center gap-3">
@@ -441,7 +442,10 @@ function Index() {
                   skills: ["Communication", "Teamwork", "Time Management", "Attention to Detail"],
                 },
               ].map((group) => (
-                <div key={group.category} className="rounded-2xl border border-border bg-background p-6">
+                <div
+                  key={group.category}
+                  className="rounded-2xl border border-border bg-background p-6"
+                >
                   <h3 className="font-heading text-lg font-bold text-primary">{group.category}</h3>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {group.skills.map((skill) => (
@@ -461,10 +465,12 @@ function Index() {
 
         <section id="contact" className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">Let&apos;s connect</h2>
+            <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">
+              Let&apos;s connect
+            </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              I am open to opportunities in private equity, real estate, and investment roles. Reach out
-              via email or LinkedIn.
+              I am open to opportunities in private equity, real estate, and investment roles. Reach
+              out via email or LinkedIn.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
