@@ -16,6 +16,8 @@ import {
 
 import heroVisual from "@/assets/hero-visual.jpg";
 
+const SITE_URL = "https://bhuvanjot.com/";
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -48,7 +50,21 @@ export const Route = createFileRoute("/")({
         content:
           "Personal website of Bhuvanjot Arneja, a third-year BBA candidate at the Schulich School of Business with experience across private equity, investment banking, and equity research.",
       },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: "Bhuvanjot Arneja" },
+      { property: "og:locale", content: "en_CA" },
+      // Absolute URLs: LinkedIn, X and iMessage do not resolve relative image paths.
+      { property: "og:image", content: `${SITE_URL}og-image.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      {
+        property: "og:image:alt",
+        content:
+          "Bhuvanjot Arneja — Schulich BBA candidate focused on private equity, real estate, and value creation.",
+      },
+      { name: "twitter:image", content: `${SITE_URL}og-image.jpg` },
     ],
+    links: [{ rel: "canonical", href: SITE_URL }],
   }),
 });
 
@@ -145,8 +161,9 @@ function Index() {
               Bhuvanjot Arneja
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Aspiring investor focused on private equity, real estate, and value creation.
-              Currently a Summer Analyst at Billion Group in Toronto.
+              Aspiring investor focused on private equity, real estate, and value creation. Most
+              recently a Private Equity Summer Analyst at Billion Group in Toronto, and incoming
+              Internal Audit Summer Analyst at Citi.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
@@ -200,10 +217,11 @@ function Index() {
                 problems into clear, actionable insights.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Most recently, I joined <strong className="text-foreground">Billion Group</strong>{" "}
-                as a Private Equity Summer Analyst, where I support real estate transactions through
-                due diligence, valuation, and investment memo preparation. I am always open to
-                connecting with professionals who share a passion for value-driven investing.
+                Most recently I spent the summer at{" "}
+                <strong className="text-foreground">Billion Group</strong> as a Private Equity
+                Summer Analyst, supporting real estate transactions through due diligence,
+                valuation, and investment memo preparation. I am always open to connecting with
+                professionals who share a passion for value-driven investing.
               </p>
             </div>
           </div>
