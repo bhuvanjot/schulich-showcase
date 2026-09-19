@@ -83,13 +83,22 @@ const navLinks = [
 // public/reports/, then add an entry at the TOP of this list (newest first).
 const publications = [
   {
-    period: "May 2026",
-    title: "Divergence Takes Hold",
+    period: "August 2026",
+    title: "Rising Yields Challenge Market Resilience",
     summary:
       "Monthly macro strategy publication of the Global Macro Strategy Group. I cover the alternatives section — private equity, private credit, real estate, venture capital, and hedge funds.",
-    pages: 27,
-    file: "/reports/gmsg-2026-05-divergence-takes-hold.pdf",
-    cover: "/reports/gmsg-2026-05-cover.jpg",
+    pages: 29,
+    file: "/reports/gmsg-2026-08-rising-yields-challenge-market-resilience.pdf",
+    cover: "/reports/gmsg-2026-08-cover.jpg",
+  },
+  {
+    period: "July 2026",
+    title: "Crowded Trades Meet Rising Yields",
+    summary:
+      "Monthly macro strategy publication of the Global Macro Strategy Group. I cover the alternatives section — private equity, private credit, real estate, venture capital, and hedge funds.",
+    pages: 29,
+    file: "/reports/gmsg-2026-07-crowded-trades-meet-rising-yields.pdf",
+    cover: "/reports/gmsg-2026-07-cover.jpg",
   },
 ];
 
