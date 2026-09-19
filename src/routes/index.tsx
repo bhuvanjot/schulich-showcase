@@ -12,6 +12,7 @@ import {
   X,
   MapPin,
   ExternalLink,
+  FileText,
 } from "lucide-react";
 
 import heroVisual from "@/assets/hero-visual.jpg";
@@ -73,8 +74,23 @@ const navLinks = [
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Involvement", href: "#involvement" },
+  { label: "Publications", href: "#publications" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
+];
+
+// GMSG publications. To add next month's: drop the PDF and a cover image into
+// public/reports/, then add an entry at the TOP of this list (newest first).
+const publications = [
+  {
+    period: "May 2026",
+    title: "Divergence Takes Hold",
+    summary:
+      "Monthly macro strategy publication of the Global Macro Strategy Group. I cover the alternatives section — private equity, private credit, real estate, venture capital, and hedge funds.",
+    pages: 27,
+    file: "/reports/gmsg-2026-05-divergence-takes-hold.pdf",
+    cover: "/reports/gmsg-2026-05-cover.jpg",
+  },
 ];
 
 function Index() {
@@ -430,6 +446,65 @@ function Index() {
                   </span>
                   <p className="mt-4 flex-1 text-muted-foreground">{item.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="publications" className="border-t border-border py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-4 flex items-center gap-3">
+              <FileText className="h-6 w-6 text-secondary" />
+              <h2 className="font-heading text-3xl font-bold text-primary md:text-4xl">
+                Publications
+              </h2>
+            </div>
+            <p className="mb-12 max-w-2xl text-muted-foreground">
+              Monthly macro strategy publications from the Global Macro Strategy Group at Schulich,
+              where I cover alternatives.
+            </p>
+            <div className="flex flex-col gap-6">
+              {publications.map((pub) => (
+                <article
+                  key={pub.file}
+                  className="group flex flex-col gap-6 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-secondary sm:flex-row"
+                >
+                  <a
+                    href={pub.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 overflow-hidden rounded-lg border border-border"
+                  >
+                    <img
+                      src={pub.cover}
+                      alt={`Cover of ${pub.title}, ${pub.period}`}
+                      width={260}
+                      height={146}
+                      loading="lazy"
+                      className="h-auto w-full sm:w-[260px]"
+                    />
+                  </a>
+                  <div className="flex flex-col">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-secondary">
+                      {pub.period} · {pub.pages} pages
+                    </span>
+                    <h3 className="mt-2 font-heading text-xl font-bold text-primary">
+                      {pub.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      {pub.summary}
+                    </p>
+                    <a
+                      href={pub.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-secondary"
+                    >
+                      Read the report (PDF)
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
